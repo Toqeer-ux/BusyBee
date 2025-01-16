@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Busy Bee Venders</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <!-- Font Awoseme link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search / Shipment No / AWB-MBL" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div>
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <img src="./assets/img/icons/icon.png" alt="">
+            <span class="badge bg-danger rounded-pill badge-number">4</span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              <strong>Notifications</strong>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <img src="./assets/img/icons/notification-4.png" alt="">
+              <div>
+                <h4>Settings</h4>
+                <p>Update Dashboard</p>
+              </div>
+            </li>
+            <li class="notification-item">
+              <img src="./assets/img/icons/notification-1.png" alt="">
+              <div>
+                <h4>Event Update</h4>
+                <p>An event date update again</p>
+              </div>
+            </li>
+            <li class="notification-item">
+              <img src="./assets/img/icons/notification-3.png" alt="">
+              <div>
+                <h4>Profile</h4>
+                <p>Update your profile</p>
+              </div>
+            </li>
+            <li class="notification-item">
+              <img src="./assets/img/icons/notification-2.png" alt="">
+              <div>
+                <h4>Application Error</h4>
+                <p>Check Your runnung application</p>
+              </div>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <div class="">
+              <span class="d-none d-md-block dropdown-toggle ps-2">Moni Roy</span>
+              <p class="d-block ps-2 m-0"> Admin</p>
+            </div>
+
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="./manage-account.html">
+                <img src="./assets/img/icons/user-account.png" alt="">
+                <span>Manage Account</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" data-bs-toggle="modal"
+              data-bs-target="#reset">
+                <img src="./assets/img/icons/account-pasword.png" alt="">
+                <span>Change Password</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="./activity-log.html">
+                <img src="./assets/img/icons/activity.png" alt="">
+                <span>Activity Log </span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <img src="./assets/img/icons/logout.png" alt="">
+                <span>Log Out</span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+
+  </header>
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+      <ul class="sidebar-nav" id="sidebar-nav">
+  
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <img src="./assets/img/icons/dash.png" alt="">
+            <span>Dashboard</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
+  
+        <li class="nav-item">
+          <a class="nav-link " href="shipments.html">
+            <img src="./assets/img/icons/truck.png" alt="">
+            <span>Shipments</span>
+          </a>
+        </li><!-- End Forms Nav -->
+        <li class="nav-item">
+          <a class="nav-link" href="airlines-table.html">
+            <img src="./assets/img/icons/flight.png" alt="">
+            <span>Flight Booking</span>
+          </a>
+        </li><!-- End Forms Nav -->
+        <li class="nav-item">
+          <a class="nav-link " href="customers.html">
+            <img src="./assets/img/icons/customers.png" alt="">
+            <span>Customers</span>
+          </a>
+        </li><!-- End Forms Nav -->
+        <li class="nav-item">
+          <a class="nav-link active" href="venders.html">
+            <img src="./assets/img/icons/venders.png" alt="">
+            <span>Venders</span>
+          </a>
+        </li><!-- End Forms Nav -->
+  
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+            <img src="./assets/img/icons/Accounts.png" alt=""><span>Accounts</span><i
+              class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="#">
+                <span>Accounts</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Tables Nav -->
+  
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+            <img src="./assets/img/icons/reports.png" alt="">Reports</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="#">
+                <span>report-one</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Charts Nav -->
+  
+        <li class="nav-item setting">
+          <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+            <img src="./assets/img/icons/Settings.png" alt=""><span>Settings</span><i
+              class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="users.html">
+                <img src="./assets/img/icons/user.png" alt="">
+                <span>User</span>
+              </a>
+            </li><!-- End F.A.Q Page Nav -->
+  
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="#">
+                <img src="./assets/img/icons/role.png" alt="">
+                <span>Role</span>
+              </a>
+            </li><!-- End Contact Page Nav -->
+  
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="#">
+                <img src="./assets/img/icons/Country.png" alt="">
+                <span>Country</span>
+              </a>
+            </li><!-- End Register Page Nav -->
+  
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="#">
+                <img src="./assets/img/icons/vat.png" alt="">
+                <span>VAT</span>
+              </a>
+            </li><!-- End Login Page Nav -->
+  
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="prices.html">
+                <img src="./assets/img/icons/price.png" alt="">
+                <span>Prices</span>
+              </a>
+            </li><!-- End Error 404 Page Nav -->
+          </ul>
+        </li><!-- End Icons Nav -->
+      </ul>
+  
+    </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Vender</h1>
+    </div>
+    <div class="shipments-table prices">
+      <h3>Vender Information</h3>
+      <div class="shipment-filter">
+        <div class="search-filter">
+          <div class="search-bar">
+            <div class="search-form d-flex align-items-center" method="POST" action="#">
+              <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+              <input type="text" name="query" placeholder="Search / Shipment No / AWB-MBL" title="Enter search keyword">
+              
+            </div>
+          </div>
+          <div class="delivery-btn">
+            <select name="" id="" class="form-select">
+              <option value="">Delivery Status</option>
+              <option value="">No</option>
+            </select>
+          </div>
+          <div class="filter-btn">
+            <button type="button"><img src="./assets/img/icons/filter.png" alt=""> Filter</button>
+          </div>
+        </div>
+        <div class="add-btn">
+          <a href="venders-reg.html"><i class="bi bi-plus"></i>New</a>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">
+              <span>SR.No</span>
+            </th>
+            <th scope="col">
+              <span>Organization Name</span>
+            </th>
+            <th scope="col">
+              <span>Contact No</span>
+            </th>
+            <th scope="col">
+              <span>
+                Email
+              </span>
+            </th>
+            <th scope="col">
+              <span>
+                Registration No
+              </span>
+            </th>
+            <th scope="col">
+              <span>
+                Active
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  1105
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item text-danger" href="#">Change</a></li>
+                  <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
+                  <li><a class="dropdown-item" href="#">Change Status</a></li>
+                </ul>
+              </div>
+            </td>
+            <td>ABC Company</td>
+            <td>+92 3452356478</td>
+            <td>hello@yopmail.com</td>
+            <td>235455647</td>
+            <td class="isactive"><span>
+              Is Active
+            </span></td>
+          </tr>
+          <tr>
+            <td>1106</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="isactive"><span></span></td>
+          </tr>
+          <tr>
+            <td>1107</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="isactive"><span></span></td>
+          </tr>
+          <tr>
+            <td>1108</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="isactive"><span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+<!-- Password change Modal -->
+<div class="modal fade reset-modal" id="reset" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">Change your password</h1>
+      </div>
+      <div class="modal-body">
+        <div class="password-form">
+          <form class="" method="" action="">
+            <div class="input">
+              <label for="">Password</label>
+              <div class="password">
+                <input type="password" id="password-field" placeholder="Password">
+                <span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+              </div>
+            </div>
+            <div class="input">
+              <label for="">New Password</label>
+              <div class="password">
+                <input type="password" id="password-field" placeholder="Password">
+                <span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+              </div>
+            </div>
+            <div class="input">
+              <label for="">Confirm Password</label>
+              <div class="password">
+                <input type="password" id="password-field" placeholder="Password">
+                <span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+              </div>
+            </div>
+            <div class="set-password">
+              <button type="submit" class="btn btn-primary">Set Password</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
